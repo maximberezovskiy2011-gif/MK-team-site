@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MK TEAM — ММА, бокс и вольная борьба для детей 7–15 лет в Пушкино</title>
+<meta name="description" content="Официальная секция Федерации ММА. Бесплатные тренировки по ММА, боксу и вольной борьбе для детей 7–15 лет. Пушкино, Ярославское шоссе 141.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta property="og:title" content="MK TEAM — ММА, бокс и вольная борьба для детей 7–15 лет">
+<meta property="og:description" content="Официальная секция. Бесплатные тренировки. Пушкино, Ярославское шоссе 141.">
+<meta property="og:image" content="assets/hero-poster.jpg">
+<style>
+:root{
+  --bg:#fff; --bg-alt:#F5F5F5;
+  --red:#D32F2F; --red-dark:#B71C1C;
+  --blue:#1976D2; --blue-dark:#0D47A1;
+  --text:#212121;
+  --font-head:'Oswald',Impact,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --wrap:1120px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;font-family:var(--font-body);font-size:1rem;line-height:1.6;color:var(--text);background:var(--bg)}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{width:min(100% - 2rem,var(--wrap));margin-inline:auto}
+
+h1,h2,h3{font-family:var(--font-head);font-weight:600;line-height:1.1;margin:0;text-transform:uppercase;letter-spacing:.01em}
+
+/* Кнопки */
+.btn{display:inline-block;padding:1rem 2rem;border-radius:999px;background:var(--red);color:#fff;
+  font-family:var(--font-head);font-weight:500;font-size:1.125rem;letter-spacing:.04em;text-transform:uppercase;
+  text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn--white{background:#fff;color:var(--red)}
+.btn--white:hover{background:var(--bg-alt)}
+
+/* Hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;
+  background:
+  radial-gradient(circle at 85% 18%,rgba(255,255,255,.14),transparent 45%),
+  repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 2px,transparent 2px 28px),
+  linear-gradient(135deg,#0A2F6B,#0D47A1 55%,#1565C0);overflow:hidden}
+.hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero__shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,71,161,.8),rgba(13,71,161,.15))}
+.hero__content{position:relative;padding-block:6rem 4rem}
+.hero h1{overflow-wrap:break-word;font-size:clamp(2.5rem,8vw,5.5rem);max-width:17ch;font-weight:700}
+.hero__sub{font-size:clamp(1.05rem,2.5vw,1.375rem);max-width:36ch;margin:1.25rem 0 2rem}
+.logo{position:absolute;top:1rem;left:1rem;z-index:2;display:flex;align-items:center;gap:.6rem;
+  padding:.5rem 1rem .5rem .6rem;background:#fff;border-radius:999px;text-decoration:none;color:var(--blue);
+  font-family:var(--font-head);font-weight:700;font-size:1.25rem;letter-spacing:.04em}
+.logo img{height:2.75rem;width:2.75rem}
+
+/* Набор */
+.promo{background:var(--red);color:#fff;padding-block:3rem}
+.promo__grid{display:grid;gap:2rem;align-items:center}
+.promo__text h2{font-size:clamp(1.75rem,5vw,3rem);margin-bottom:1.75rem}
+.promo__grid--single{grid-template-columns:1fr;text-align:center}
+.promo__grid--single h2{max-width:34ch;margin-inline:auto}
+
+/* Секции */
+.section{padding-block:clamp(3rem,8vw,6rem)}
+.section--alt{background:var(--bg-alt)}
+.title{font-size:clamp(2rem,5vw,3rem);color:var(--blue);padding-bottom:.5rem;border-bottom:4px solid var(--blue);display:inline-block;margin-bottom:2rem}
+
+/* Футер */
+.footer{background:var(--blue-dark);color:#fff;padding-block:2.5rem}
+.footer p{margin:.25rem 0}
+.footer a{text-decoration:underline}
+
+/* Появление при скролле */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.is-vis
